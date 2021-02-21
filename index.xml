@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Even - A super concise theme for Hugo</description>
+    <title>Seuan no memo</title>
+    <link>https://Sheng-Huang.github.io/</link>
+    <description>Recent content on Seuan no memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Jan 2021 19:56:01 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 19:56:01 +0800</lastBuildDate><atom:link href="https://Sheng-Huang.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>《ostep》第四章</title>
-      <link>http://localhost:1313/post/ostepchap4/</link>
+      <title>《OSTEP》第四章</title>
+      <link>https://Sheng-Huang.github.io/post/ostepchap4/</link>
       <pubDate>Sun, 03 Jan 2021 19:56:01 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/ostepchap4/</guid>
+      <guid>https://Sheng-Huang.github.io/post/ostepchap4/</guid>
       <description>第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar</description>
     </item>
     
     <item>
       <title>《On Java 8》第二到第四章</title>
-      <link>http://localhost:1313/post/onjava8chap2/</link>
+      <link>https://Sheng-Huang.github.io/post/onjava8chap2/</link>
       <pubDate>Sat, 02 Jan 2021 20:51:58 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/onjava8chap2/</guid>
+      <guid>https://Sheng-Huang.github.io/post/onjava8chap2/</guid>
       <description>第二章 配置 Shell基本操作 以下为linux系统的操作: Change directory： cd path（路径..为上一级目录） 目录名中含有空格时需要再路径</description>
     </item>
     
     <item>
       <title>《C&#43;&#43; Primer》 第一二章 变量和基本类型</title>
-      <link>http://localhost:1313/post/cpp2chap/</link>
+      <link>https://Sheng-Huang.github.io/post/cpp2chap/</link>
       <pubDate>Wed, 01 Jul 2020 09:07:14 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/cpp2chap/</guid>
+      <guid>https://Sheng-Huang.github.io/post/cpp2chap/</guid>
       <description>第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main</description>
     </item>
     

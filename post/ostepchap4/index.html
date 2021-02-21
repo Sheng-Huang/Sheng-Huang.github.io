@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>《ostep》第四章 - Even - A super concise theme for Hugo</title>
+  <title>《OSTEP》第四章 - Seuan no memo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Seuan" /><meta name="description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/ostepchap4/" />
+<link rel="canonical" href="https://Sheng-Huang.github.io/post/ostepchap4/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,19 +39,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="《ostep》第四章" />
+<meta property="og:title" content="《OSTEP》第四章" />
 <meta property="og:description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/ostepchap4/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://Sheng-Huang.github.io/post/ostepchap4/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-01-03T19:56:01&#43;08:00" />
 <meta property="article:modified_time" content="2021-01-03T19:56:01&#43;08:00" />
 
-<meta itemprop="name" content="《ostep》第四章">
+<meta itemprop="name" content="《OSTEP》第四章">
 <meta itemprop="description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar"><meta itemprop="datePublished" content="2021-01-03T19:56:01&#43;08:00" />
 <meta itemprop="dateModified" content="2021-01-03T19:56:01&#43;08:00" />
-<meta itemprop="wordCount" content="1954">
+<meta itemprop="wordCount" content="1953">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="《ostep》第四章"/>
+<meta name="twitter:title" content="《OSTEP》第四章"/>
 <meta name="twitter:description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar"/>
 
 <!--[if lte IE 9]>
@@ -67,7 +67,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
+    <a href="/" class="logo">Seuan</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -96,7 +96,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
+  <a href="/" class="logo">Seuan</a>
 </div>
 
 
@@ -125,7 +125,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">《ostep》第四章</h1>
+      <h1 class="post-title">《OSTEP》第四章</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2021-01-03 </span>
@@ -180,45 +180,46 @@
 <ul>
 <li>进程可以处于以下三种状态：running、ready、blocked。在阻塞状态下，一个进程执行了某种操作，直到发生其他事件时才会准备运行。比如，当进程向磁盘发起I/O请求时，它会被阻塞，因此其他进程可以使用处理器,I/O完成后，进程再变为ready或running。从ready到running意味着进程被schedule，反过来则为deschedule。</li>
 <li>操作系统是一个程序，它有一些关键的数据结构来追踪各种信息。比如，为了跟踪每个进程的状态，可能会为所有就绪的进程保留process list，以及跟踪当前正在运行的进程的一些附加信息。操作系统还必须跟踪被阻塞的进程，当I/O事件完成时，操作系统应确保唤醒正确的进程，让它准备好再次运行。
-<img src="/img/ostepchap4_1.png" alt=""></li>
+<img src="/images/ostepchap4_1.PNG" alt=""></li>
 <li>context switch技术：当进程停止时，在图中的context结构体中保存寄存器的内容，重启进程后再通过将值放回实际存储的物理寄存器中恢复。</li>
 <li>由图可知，还有一些进程状态，如initial表示进程在创建时处于的状态。zoobie(final)表示进程已退出但尚未清理，这样可以允许其他进程(通常是创建进程的父进程)检查进程的返回代码，并查看刚刚完成的进程是否成功执行(通常，在基于UNIX的系统中，程序成功完成任务时返回0)。完成后，父进程将会进行最后一次调用(例如wiat方法)以等待子进程的完成，并告诉操作系统它可以清理这个进程的所有数据结构。</li>
 </ul>
 <h3 id="作业">作业</h3>
 <p>ReadMe
-<img src="ostepchap4_3.png" alt="">
-1.
-<img src="ostepchap4_2.png" alt="">
-由ReadMe中的参数可知，逗号分隔了的需要运行的进程，每个进程分别执行5条指令，全程使用CPU，因此利用率为100%。
-<img src="ostepchap4_4.png" alt="">
-加上<code>-c</code>参数后，显示运行PID0时PID1已就绪，PID0完成后运行PID1。期间一直占用CPU，没有IOs行为。
-2.
-<img src="ostepchap4_5.png" alt="">
-未猜对
-<img src="ostepchap4_6.png" alt="">
-由上图知，完成这两个进程需要10个单位的时间，首先PID0使用CPU4个单位时间，完成后PID1在第5个单位时间上由CPU发出执行IO的指令，而后PID1被阻塞(或waiting)，并且等待4个单位时间的执行IO行为，此时CPU无事可做。最后IO执行完毕，PID1恢复运行，结束进程。
-3.
-<img src="ostepchap4_7.png" alt="">
-由问题2知，执行IO时进程被阻塞，此时CPU无事可做，其他进程可以使用CPU。因此交换顺序后，PID0被阻塞同时PID1可以脱离就绪调用CPU，最终6个单位时间完成两个进程。
-4.
-<img src="ostepchap4_8.png" alt="">
-5.
-<img src="ostepchap4_9.png" alt="">
-6.
-<img src="ostepchap4_10.png" alt="">
-当PID1结束后，应按就绪时间排序进行进程，因此PID0最后执行，系统资源未被有效利用
-7.
-<img src="ostepchap4_11.png" alt="">
-设置立刻运行发出的IO进程可以使CPU利用率达到100%，节省系统与时间资源。
-8.
-略</p>
+<img src="/images/ostepchap4_3.PNG" alt=""></p>
+<ol>
+<li></li>
+</ol>
+<p><img src="/images/ostepchap4_2.PNG" alt=""><br>
+由ReadMe中的参数可知，逗号分隔了的需要运行的进程，每个进程分别执行5条指令，全程使用CPU，因此利用率为100%。<br>
+<img src="/images/ostepchap4_4.PNG" alt=""><br>
+加上<code>-c</code>参数后，显示运行PID0时PID1已就绪，PID0完成后运行PID1。期间一直占用CPU，没有IOs行为。<br>
+2.<br>
+<img src="/images/ostepchap4_5.PNG" alt=""><br>
+未猜对<br>
+<img src="/images/ostepchap4_6.PNG" alt=""><br>
+由上图知，完成这两个进程需要10个单位的时间，首先PID0使用CPU4个单位时间，完成后PID1在第5个单位时间上由CPU发出执行IO的指令，而后PID1被阻塞(或waiting)，并且等待4个单位时间的执行IO行为，此时CPU无事可做。最后IO执行完毕，PID1恢复运行，结束进程。<br>
+3.<br>
+<img src="/images/ostepchap4_7.PNG" alt=""><br>
+由问题2知，执行IO时进程被阻塞，此时CPU无事可做，其他进程可以使用CPU。因此交换顺序后，PID0被阻塞同时PID1可以脱离就绪调用CPU，最终6个单位时间完成两个进程。<br>
+4.<br>
+<img src="/images/ostepchap4_8.PNG" alt=""><br>
+5.<br>
+<img src="/images/ostepchap4_9.PNG" alt=""><br>
+6.<br>
+<img src="/images/ostepchap4_10.PNG" alt=""><br>
+当PID1结束后，应按就绪时间排序进行进程，因此PID0最后执行，系统资源未被有效利用<br>
+7.<br>
+<img src="/images/ostepchap4_11.PNG" alt=""><br>
+设置立刻运行发出的IO进程可以使CPU利用率达到100%，节省系统与时间资源。<br>
+8. 略</p>
 
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">olOwOlo</span>
+    <span class="item-content">Seuan</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -269,7 +270,7 @@
       <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
       <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
       <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://Sheng-Huang.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
@@ -286,8 +287,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+    2020 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>Seuan</span>
   </span>
 </div>
 
