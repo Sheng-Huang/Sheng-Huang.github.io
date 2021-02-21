@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>《C&#43;&#43; Primer》 第一二章 变量和基本类型 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/cpp2chap/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="《C&#43;&#43; Primer》 第一二章 变量和基本类型" />
+<meta property="og:description" content="第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/cpp2chap/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-07-01T09:07:14&#43;08:00" />
+<meta property="article:modified_time" content="2020-07-01T09:07:14&#43;08:00" />
+
+<meta itemprop="name" content="《C&#43;&#43; Primer》 第一二章 变量和基本类型">
+<meta itemprop="description" content="第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main"><meta itemprop="datePublished" content="2020-07-01T09:07:14&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-01T09:07:14&#43;08:00" />
+<meta itemprop="wordCount" content="4983">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="《C&#43;&#43; Primer》 第一二章 变量和基本类型"/>
+<meta name="twitter:description" content="第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">《C&#43;&#43; Primer》 第一二章 变量和基本类型</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-07-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#第一章">第一章</a>
+          <ul>
+            <li><a href="#部分命令行常识">部分命令行常识</a></li>
+            <li><a href="#初识输入输出">初识输入输出</a></li>
+            <li><a href="#注释">注释</a></li>
+            <li><a href="#零散知识">零散知识</a></li>
+          </ul>
+        </li>
+        <li><a href="#第二章">第二章</a>
+          <ul>
+            <li><a href="#算数类型">算数类型</a></li>
+            <li><a href="#变量">变量</a></li>
+            <li><a href="#复合类型">复合类型</a></li>
+            <li><a href="#const限定符">const限定符</a></li>
+            <li><a href="#处理类型">处理类型</a></li>
+            <li><a href="#零散知识-1">零散知识</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="第一章">第一章</h2>
+<h3 id="部分命令行常识">部分命令行常识</h3>
+<ul>
+<li><code>.\</code>表示文件在<strong>当前目录</strong></li>
+<li>在UNIX中，运行一个可执行文件需要使用<strong>全文件名</strong>(Windows中则可以省略扩展名)。</li>
+<li>访问main的返回值的方法依赖于系统，可用<code>echo</code>命令获得，返回值0表成功。
+<ul>
+<li>UNIX: <code>$ echo $?</code></li>
+<li>Windows： <code>$ echo %ERRORLEVEL%</code></li>
+</ul>
+</li>
+<li><code>$ addItems &lt;infile&gt; outlife</code>是文件<strong>重定向机制</strong>的一个例子，其中addItems是已编译的可执行文件，使当前目录中的infile写入outfile。</li>
+</ul>
+<h3 id="初识输入输出">初识输入输出</h3>
+<ul>
+<li>输入输出运算符接受iostream对象与对应值，运算时返回其左侧运算对象，因此可以将运算连起来。</li>
+<li>标准错误<code>cerr</code>输出警告和错误信息，<code>clog</code>输出运行时一般信息。</li>
+<li><code>endl</code>被称为操纵符，它将结束当前行，并将<strong>洗刷设备的缓冲区</strong>，这将确保迄今为止程序的所有输出都被事实地写入在输出流中，而不是停留在内存中等待写入。</li>
+<li>调试时添加的打印语句应保证一直刷新流，不然程序崩溃后输出可能滞留在缓冲区内，导致混淆了打印语句未刷新流时的位置，作出错误判断。</li>
+<li><code>::</code>是<a id="Section_ScopeOperator"><strong>作用域运算符</strong></a>。</li>
+<li>文件结束符(EOF)使对象状态无效。</li>
+<li>UNIX中输入EOF的方法是<kbd>ctrl</kbd>+<kbd>D</kbd>，Windows中是输入<kbd>ctrl</kbd>+<kbd>Z</kbd>后按<kbd>Enter</kbd>或<kbd>Return</kbd>。</li>
+</ul>
+<h3 id="注释">注释</h3>
+<ul>
+<li>一种良好的注释习惯：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cm">/*
+</span><span class="cm"> *
+</span><span class="cm"> */</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>注释界定符<strong>不能嵌套</strong>。</li>
+</ul>
+<h3 id="零散知识">零散知识</h3>
+<ul>
+<li>开启<strong>warning</strong>：GCC中用<code>-Wall</code>，VS中用<code>/W4</code>。</li>
+<li>main函数的起始花括号必须是形参列表后第一个非空非注释的字符。</li>
+<li><code>#include &quot;&quot;</code>内写入不属于标准库的头文件。<code>#include &lt;&gt;</code>内写入标准库的头文件。</li>
+</ul>
+<hr>
+<h2 id="第二章">第二章</h2>
+<h3 id="算数类型">算数类型</h3>
+<ul>
+<li>C++规定一个<code>int</code>至少和一个<code>short</code>一样大，更大范围的数据类型以此类推。</li>
+<li>不同于其他整形，字符型有三种：<code>char</code>、<code>signed char</code>和<code>unsigned char</code>。然而，字符的表现形式依旧是有无符号两种。</li>
+<li>在算数表达式中不要直接使用<code>char</code>或<code>bool</code>，因为<code>char</code>在有些机器上是有符号的，有些机器上是无符号的。如果你要使用微型整数，要格外明确是<code>signed char</code>还是<code>unsigned char</code>。</li>
+<li>向布尔值类型转换时，非0值转换为true，0转换为false。</li>
+<li>浮点型向整型转换时仅保留整数部分。</li>
+<li>整型向浮点型转换时小数部分为0，若整型值太大超出浮点型表示范围则会损失精度。</li>
+<li>向无符号类型转换的值通过对表示范围<strong>取模</strong>表示。</li>
+<li>当我们给一个带符号类型赋值超出表示范围时，结果是<a id="Section_UndefinedVariable"><strong>未定义</strong></a>的，程序可能继续工作，可能崩溃，也可能产生垃圾数据。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">signed</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">256</span><span class="c1">//假设char占8bits，c的值为未定义。
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>当一个算术表达式中既有无符号数又有<code>int</code>时，则<code>int</code>会被转换为无符号数计算。</li>
+<li>整型字面值的具体数据类型是由值与符号决定，默认情况下十进制字面值是有符号数，八进制和十六进制可能是有符号数也可能是无符号数。
+<ul>
+<li>所以十进制字面值类型由值在<code>int</code>、<code>long</code>和<code>long long</code>中最小的那个决定。</li>
+<li>八进制和十六进制则是<code>int</code>、<code>unsigned int</code>、<code>long</code>、<code>unsigned long</code>、<code>long long</code>和<code>unsigned long long</code>。</li>
+<li>类型<code>short</code>没有对应的字面值。</li>
+</ul>
+</li>
+<li>尽管整型字面值可能被存在有符号类型中，深入来说，十进制<strong>字面值的值</strong>并不是一个负数，因为无符号数按原码存储，负号并不是值的一部分，它的作用仅为对值取负。</li>
+<li>浮点型字面值默认为<code>double</code>。</li>
+<li>字面值<code>nullptr</code>赋值时可以转换成任意指针类型。</li>
+<li>程序猿不可直接使用<strong>不可打印字符</strong>与<strong>需转义字符</strong>。不可打印字符如退格，没有可视的图符。需转义字符则是在C++中有特殊含义。需要通过转义序列使用它们：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">换行符</th>
+<th style="text-align:center">纵向制表符</th>
+<th style="text-align:center">反斜线</th>
+<th style="text-align:center">回车符</th>
+<th style="text-align:center">横向制表符</th>
+<th style="text-align:center">退格符</th>
+<th style="text-align:center">问号</th>
+<th style="text-align:center">进纸符</th>
+<th style="text-align:center">报警或响铃符</th>
+<th style="text-align:center">单双引号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\n</td>
+<td style="text-align:center">\v</td>
+<td style="text-align:center">\\</td>
+<td style="text-align:center">\r</td>
+<td style="text-align:center">\t</td>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">?</td>
+<td style="text-align:center">\f</td>
+<td style="text-align:center">\a</td>
+<td style="text-align:center">'(&quot;)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>泛化转义序列一般为<code>\x(0x)</code>或<code>\(0)</code>，内含十六进制或三个以内八进制数字。</li>
+<li>通过指定某些前缀或后缀，可以改变一般字面值的默认类型。比如将超过8位的由十六进制的转义序列表示的16位字符<code>\x1234</code>需配合前缀u(所指Unicode16字符，由类型char16_t表示)使用。</li>
+</ul>
+<h3 id="变量">变量</h3>
+<ul>
+<li>C++是静态类型语言，在编译期检查类型。</li>
+<li>使用<strong>列表初始化</strong>若初始值存在信息丢失的风险，则编译器将报错。如:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">long</span> <span class="kt">double</span> <span class="n">ld</span> <span class="o">=</span> <span class="err">π</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">{</span><span class="n">ld</span><span class="p">};</span><span class="c1">//使用赋值符则可以强制转换，不会报错
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>若定义变量时未指定初值，则会<strong>默认初始化</strong>。默认值由变量类型与定义变量的位置有关，如果内置类型的变量未被显示初始化，它的值由定义的位置决定。定义于任何函数体之外的变量被初始化为0。然而，例外情况是定义在函数体内部的内置类型变量将<strong>不被初始化</strong>。一个未被初始化的内置类型变量的值是<a href="#Section_UndefinedVariable"><strong>未定义</strong></a>的，含有一个不确定的值。如果试图拷贝或以其他形式访问它将触发错误。</li>
+<li>一些类要求每个对象都显式初始化，此时如果创建了一个对象但未进行初始化将触发错误。</li>
+<li><strong>声明</strong>使得名字为程序所知，一个文件如果想要使用别处定义的名字则必须包含声明。使用关键字<code>extern</code>并不显式初始化变量来声明它。在函数体内部，如果试图初始化extern变量将触发错误。</li>
+<li>C++为标准库保留了一些<strong>标识符</strong>名，用户自定义的标识符中不能出现连续两个下划线，也不能以下划线紧连大写字母开头。此外，定义在函数体外的标识符不能以下划线开头。</li>
+<li>C++中作用于大多数以花括号分隔，名字的有效区域始于名字的声明语句，以声明语句的作用域末端为结束。名字<code>main</code>定义于所有花括号之外，它和其他大多数定义在函数体之外的名字一样拥有<strong>全局作用域</strong>，全局作用域没有名字，可使用空格后<a href="#Section_ScopeOperator"><strong>作用域运算符</strong></a>访问。块内的作用域称为<strong>块作用域</strong>。</li>
+</ul>
+<h3 id="复合类型">复合类型</h3>
+<ul>
+<li>C++11中新增了一种<strong>右值引用</strong>，主要用于<strong>内置类</strong>。</li>
+<li><strong>引用</strong>不是对象，必须被初始化，不能与字面值或表达式计算结果绑定，绑定后不可更改。除了对常量的引用与对动态类型对象的基类的静态类型引用外（P534），引用的类型须和对象的类型匹配。</li>
+<li><strong>指针</strong>无须初始化，此时值不确定。</li>
+<li>试图拷贝或以其他方式访问无效指针的值都将触发错误，且编译器不负责检查这类错误。指针处于<strong>空指针</strong>或<strong>指向紧邻对象所占空间的下一位置</strong>的特殊状态时，虽然指针有效，但是对象不存在，访问此类指针对象的行为不被允许。</li>
+<li>指针相等可能情况：
+<ul>
+<li>都为空。</li>
+<li>指向的对象的地址的值相同。</li>
+<li>指向另外对象的下一地址的值相同。</li>
+</ul>
+</li>
+<li><code>void*</code>可用于存放任意对象的地址，类型未知。可对它进行的操作有：赋值于另一个<code>void*</code>指针，比较操作，作为函数的输入输出。对于<code>void*</code>来说，内存空间仅仅是内存空间。</li>
+<li>离变量最近的符号对变量有直接的影响。指针的引用：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="err">；</span>
+<span class="kt">int</span> <span class="o">*&amp;</span><span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="const限定符">const限定符</h3>
+<ul>
+<li>const对象一旦创建后就不可改变，所以必须初始化。</li>
+<li>const变量在编译时就已经被值替换，在多文件项目中，为了支持这一用法，并避免重定义，只能在定义const变量的文件内访问。</li>
+<li>某些时候const变量的初始值不是一个常量表达式，但是又需要在文件中共享，可以对const变量的声明和定义都添加<code>extern</code>关键字，这样只需要定义一次。</li>
+<li>初始化对常量的引用时可以允许用任意表达式作为初始值，只要该表达式的结果能被转换成引用的类型即可。尤其允许一个对常量的引用绑定一个非常量的对象，字面值甚至一般表达式，此时引用绑定的其实是<strong>临时量对象</strong>，也就是编译器需要一个空间来暂存表达式结果的未命名对象。由于在类型转换时，可绑定的对象实质上转变为临时量对象，所以对非常量的引用无法改变原对象值，因此非常量的引用的初始化不能是任意表达式。</li>
+<li>指针也有两个与所指对象类型不一致的例外，一个是对常量的指针，另一个是父类指针指向子类对象。</li>
+<li><strong>顶层const</strong>对任意数据类型都适用，<strong>底层const</strong>则为复合类型的基本类型，指针可以既是顶层const又是底层const。</li>
+<li>执行拷贝操作时，顶层const不受影响，底层const要求拷入与拷出对象具有相同的底层const资格，或者对象的数据类型可以转换。</li>
+<li><strong>常量表达式</strong>是指值不会改变并且在编译过程就能得到计算结果的表达式。字面值属于常量表达式，用常量表达式初始化的const对象也是常量表达式。</li>
+<li>一个对象(或表达式)由它的数据类型和初始值共同决定它的常量表达式性质。</li>
+<li>C++11规定，允许将变量声明为<code>constexpr</code>的<strong>字面值类型</strong>以便由编译器来验证变量的值是否是一个常量表达式。允许定义一种特殊的<strong>constexpr函数</strong>，它足够简单以使编译时就可以计算其结果。</li>
+<li>尽管指针和引用都能定义成constexpr，但他们的初始值却受到严格限制。一个constexpr的指针的初始值必须是<code>nullptr</code>或<code>0</code>，或者是存储于某个固定地址中的对象。函数体内定义的变量一般并不存放于固定地址，定于与所有函数体之外的对象其固定地址不变，可用来初始化constexpr指针。并且，允许函数定义一类有效范围超出函数本身的变量，同样也有固定地址。</li>
+<li>constexpr把它所定义的对象置为了顶层const。</li>
+</ul>
+<h3 id="处理类型">处理类型</h3>
+<ul>
+<li>有两种方法可以定义类型别名，传统使用<code>typedef</code>，新标准使用<strong>别名声明</strong>，即<code>using</code>加等号。</li>
+<li>如果类型别名指代的是复合类型或者常量，那么把他用到声明语句可能会产生谬误。例如：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pstring</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">pstring</span> <span class="n">cstr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//与下行不同，pstring是变量的由指针所确定的数据类型，cstr不含指针声明符，即a constant pointer to char；
+</span><span class="c1"></span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">cstr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//a pointer to const char；
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>auto</code>类型说明符让编译器通过初始值来推断变量的类型，显然，auto变量必须有初始值。</li>
+<li>显然，auto以引用对象的值作为类型。另外，auto一般会忽略掉顶层const，同时保留底层const。</li>
+<li><strong>CV限定符</strong>，即const 和volatile限定符，因为纯<strong>右值</strong>没有CV属性，所以以下句子错误：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">auto</span> <span class="o">&amp;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//应为const auto &amp;a = 1;
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>当使用auto声明多个变量时，因为一条声明语句只能有一个基本数据类型，所以该语句中所有变量的初始基本数据类型都必须一样。&amp;与*只从属于声明符，而非基本数据类型的一部分，只需保证初始值基本数据类型相同,因此：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">ci</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">auto</span> <span class="o">&amp;</span><span class="n">m</span> <span class="o">=</span> <span class="n">ci</span> <span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ci</span><span class="p">;</span> <span class="c1">//这里都是ci，类型相同,在这里auto推演的是变量p而非包含声明符的*p的类型，这里定义了p为指针类型，推断出p为const int*。
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>decltype</code>选择并返回操作数的数据类型，适用于不想用该值初始化的情况。在此过程中，编译器分析表达式并得到它的类型，却不实际计算表达式的值。</li>
+<li>如果decltype使用的表达式是一个变量，则返回包括const和引用在内的类型，在此处引用唯一例外地不等同于其所指对象的同义词。</li>
+<li>想让结果类型是引用所指的具体类型时，可将引用作为表达式的一部分:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<span class="k">decltype</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="n">r1</span><span class="p">;</span> <span class="c1">//类型为绑定int的引用
+</span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">0</span><span class="p">)</span> <span class="n">r2</span><span class="p">;</span> <span class="c1">//类型为int
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>如果表达式的内容是解引用操作，则decltype得到引用类型。</li>
+<li>有些表达式将向decltype返回一个引用类型。一般来说当这种情况发生时，意味着该表达式的结果对象能作为一条赋值语句的<strong>左值</strong>。</li>
+<li>如果变量名加上一层或多层括号，编译器就会认为变量是一个表达式。变量是一种可以作为赋值语句左值的特殊表达式，所以这样的decltype会得到引用类型。</li>
+</ul>
+<h3 id="零散知识-1">零散知识</h3>
+<ul>
+<li><strong>预处理变量</strong>不属于<strong>命名空间std</strong>，无视C++关于作用域的规则。</li>
+<li>可使用<code>struct</code>定义<strong>类</strong>，类体右侧表示结束的花括号后必须写一个分号，是因为类体后面可以紧跟变量名以示对该类对象的定义。不过一般来说，最好不要把<strong>对象</strong>的定义和类的定义混在一起。</li>
+<li>尽管可以在函数体内定义类，但是这样的类会受到一些限制，所以一般在函数体外定义类。为了确保各个文件中类的定义一致，类通常被定义在头文件中，头文件命名规范为类名。<strong>头文件</strong>通常包含哪些只能被定义一次的实体，如类，const和constexpr变量。头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明。</li>
+<li>确保头文件多次包含仍能安全工作的常用技术是<strong>预处理器</strong>，在编译前执行，遇到<code>#include</code>标记时用对应头文件代替它。</li>
+<li><strong>头文件保护符</strong>依赖于预处理变量。预处理变量分已定义和未定义两种状态。
+<ul>
+<li><code>#define</code>把一个名字设定为预处理变量。</li>
+<li><code>#ifdef</code>当且仅当变量已定义时为真，<code>ifndef</code>则相反。</li>
+<li>一旦结果为真，则执行后续操作直到遇到<code>#endif</code>指令为止。使用这些功能就能有效防止重复包含的发生。</li>
+</ul>
+</li>
+<li>整个程序中的预处理变量包括头文件保护符必须唯一，通常的做法是基于头文件中类的名字来构建保护符的名字，为了避免与其他实体名字发生冲突，预处理变量名字应全部大写。</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-07-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/onjava8chap2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">《On Java 8》第二到第四章</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

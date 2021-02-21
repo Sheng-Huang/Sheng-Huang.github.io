@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>《On Java 8》第二到第四章 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="第二章 配置 Shell基本操作 以下为linux系统的操作: Change directory： cd path（路径..为上一级目录） 目录名中含有空格时需要再路径" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/onjava8chap2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="《On Java 8》第二到第四章" />
+<meta property="og:description" content="第二章 配置 Shell基本操作 以下为linux系统的操作: Change directory： cd path（路径..为上一级目录） 目录名中含有空格时需要再路径" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/onjava8chap2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-01-02T20:51:58&#43;08:00" />
+<meta property="article:modified_time" content="2021-01-02T20:51:58&#43;08:00" />
+
+<meta itemprop="name" content="《On Java 8》第二到第四章">
+<meta itemprop="description" content="第二章 配置 Shell基本操作 以下为linux系统的操作: Change directory： cd path（路径..为上一级目录） 目录名中含有空格时需要再路径"><meta itemprop="datePublished" content="2021-01-02T20:51:58&#43;08:00" />
+<meta itemprop="dateModified" content="2021-01-02T20:51:58&#43;08:00" />
+<meta itemprop="wordCount" content="3026">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="《On Java 8》第二到第四章"/>
+<meta name="twitter:description" content="第二章 配置 Shell基本操作 以下为linux系统的操作: Change directory： cd path（路径..为上一级目录） 目录名中含有空格时需要再路径"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">《On Java 8》第二到第四章</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-01-02 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#第二章-配置">第二章 配置</a>
+          <ul>
+            <li><a href="#shell基本操作">Shell基本操作</a></li>
+          </ul>
+        </li>
+        <li><a href="#第三章-对象">第三章 对象</a>
+          <ul>
+            <li><a href="#数据存储">数据存储</a></li>
+            <li><a href="#对象清理与作用域">对象清理与作用域</a></li>
+            <li><a href="#程序编写">程序编写</a></li>
+          </ul>
+        </li>
+        <li><a href="#第四章-运算符">第四章 运算符</a>
+          <ul>
+            <li><a href="#一些运算符">一些运算符</a></li>
+            <li><a href="#转换相关">转换相关</a></li>
+            <li><a href="#基本类型相关">基本类型相关</a></li>
+            <li><a href="#其他">其他</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="第二章-配置">第二章 配置</h2>
+<h3 id="shell基本操作">Shell基本操作</h3>
+<p>以下为linux系统的操作:</p>
+<ul>
+<li>Change directory： <code>cd path</code>（路径..为上一级目录）<br>
+　　　　　　　　　目录名中含有空格时需要再路径上加上<code>“”</code><br>
+　　　　　　　　　<code>pushed path</code> 记住来源并跳转到其他目录<br>
+　　　　　　　　　<code>popd</code> 返回pushed的来源<br>
+　　　　　　　　　显然，pushed通过一个<strong>目录栈</strong>来达成目的</li>
+<li>list directory: <code>ls</code> 列举出当前目录下除了隐藏文件的所有文件和子目录<br>
+　　　　　　可以使用通配符<code>*</code>缩小范围</li>
+<li>make directory： <code>mkdir name</code></li>
+<li>remove directory : <code>rm -r name</code></li>
+<li>remove document: <code>rm name</code></li>
+<li>history commands: <code>history</code> 展示最近的命令<br>
+　　　　　　　　　<code>!number</code> 重复往前第几条命令</li>
+</ul>
+<h2 id="第三章-对象">第三章 对象</h2>
+<h3 id="数据存储">数据存储</h3>
+<ul>
+<li>数据存储的位置:
+<ol>
+<li>Registers:位于CPU中，java对寄存器没有控制权</li>
+<li>Stack:位于RAM中，通过栈指针获得处理器的直接支持。java必须知道栈内保存的所有项的<strong>生命周期</strong>，因此对象本身不适合保存在栈上</li>
+<li>heap：位于RAM中，存储所有java对象，不需要知道对象的生命周期。当<code>new</code>一个对象时，自动在堆中进行内存分配。另外，由于堆是<strong>线程共享</strong>的，方便于多线程访问对象</li>
+<li>constant storage :通常存放在程序代码中。如需严格保护，可将他们置于ROM中</li>
+<li>Non-RAM storage： 数据完全存在于程序之外，在程序未运行以及脱离程序控制后依然存在。例如序列化对象被转化为字节流，发送给另一台机器。例如持久化对象被放置在磁盘上。这种存储方式是将对象转存于另一介质中，并在需要时恢复成常规的，基于RAM的对象</li>
+</ol>
+</li>
+</ul>
+<h4 id="基本类型的存储">基本类型的存储</h4>
+<ul>
+<li>java采用了和C++相同的策略，即使用一个自动变量直接存储值，并置于栈内存中</li>
+<li>java确定了每种基本类型的内存占用大小。这些大小不会像其他一些语言那样随着机器环境的变化而变化
+<img src="/img/onjava8chap3_1.png" alt="">
+如果需要在堆内存中表示基本数据类型，需要用到他们的包装类:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Character</span> <span class="n">ch</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Character</span><span class="o">(</span><span class="sc">&#39;x&#39;</span><span class="o">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>自动装箱：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Character</span> <span class="n">ch</span> <span class="o">=</span> <span class="sc">&#39;x&#39;</span><span class="o">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>自动拆箱：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">ch</span><span class="o">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>为了保证安全性，类中的基本类型会在未显示初始化时为默认值。方法不属于类，因此不会默认初始化</li>
+</ul>
+<h4 id="高精度数值">高精度数值</h4>
+<ul>
+<li>在 Java 中有两种类型的数据可用于高精度的计算。它们是<code>BigInteger</code>和<code>BigDecimal</code></li>
+</ul>
+<h4 id="数组的存储">数组的存储</h4>
+<ul>
+<li>基于安全性，java中使用数组必须初始化，并且不能访问长度以外的数据</li>
+<li>当创建一个数组时，实际上是创建了一个引用数组，并且每个引用的初始值为<code>null</code>。由上一点知，如果我们尝试使用为 null 的引用，则会在运行时报错</li>
+<li>我们还可创建基本类型的数组。编译器通过将该数组的内存全部置零来保证初始化</li>
+</ul>
+<h3 id="对象清理与作用域">对象清理与作用域</h3>
+<ul>
+<li>作用域定义了该范围内定义的变量名的<strong>可见性</strong>和<strong>生存周期</strong>。一般由大括号决定</li>
+<li>有别于C和C++可隐藏较大作用域变量，java不能在作用域内重定义变量，如下:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="o">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">12</span><span class="o">;</span>
+    <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">96</span><span class="o">;</span> <span class="c1">// Illegal
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>java对象与基本类型具有不同的生命周期。当我们使用new关键字来创建java对象时，它的生命周期将会超出作用域，而它的引用则在作用域终点结束。java的<strong>垃圾收集器</strong>会检查所有new出来的对象并判断哪些不再可达，继而释放那些被占用的内存，供其他新的对象使用</li>
+<li><code>return</code>结束方法同时返回值</li>
+</ul>
+<h3 id="程序编写">程序编写</h3>
+<h4 id="命名可见性">命名可见性</h4>
+<p>C++ 将函数嵌套在类中，所以它们不会和嵌套在其他类中的函数名冲突。然而，C++还是允许全局数据和全局函数，因此仍有可能发生冲突。为了解决这个问题，C++ 使用附加的关键字<code>namespace</code>引入了<strong>命名空间</strong></p>
+<p>java 采取了一种新的方法避免了以上这些问题：为一个类库生成一个明确的名称，java 创建者希望我们反向使用自己的网络域名，因为域名通常是唯一的</p>
+<p>使用反向 URL 将命名空间与文件路径相关联不会导致BUG，但它却给源代码管理带来麻烦。例如在 com.mindviewinc.utility.foibles 这样的目录结构中，我们创建了com和mindviewinc空目录。它们存在的唯一目的就是用来表示这个反向的 URL</p>
+<h4 id="使用其他组件">使用其他组件</h4>
+<p>无论何时在程序中使用预先定义好的类，编译器都必须找到该类。最简单的情况下，该类存在于被调用的源代码文件中。此时我们使用该类 —— 即使该类在文件的后面才会被定义（Java 消除了所谓的“前向引用”问题）</p>
+<p>当类在其他地方时，必须通过使用<code>import</code>关键字来告诉 java 编译器具体要使用的类。import指示编译器导入一个包，也就是一个类库（在其他语言中，一个库不仅包含类，还可能包括函数和数据，但请记住 Java 中的所有代码都必须写在类里）。大多数时候，我们都在使用 Java 标准库中的组件。有了这些构件，就不必写一长串的反转域名</p>
+<h4 id="static">static</h4>
+<ul>
+<li>static创建不需要类和对象的字段或方法，static字段和方法可以用类名+.+字段/方法表示</li>
+<li>static也可创建static对象与嵌套类</li>
+</ul>
+<h2 id="第四章-运算符">第四章 运算符</h2>
+<h3 id="一些运算符">一些运算符</h3>
+<ul>
+<li>Side Effect指的是运算符可以改变运算对象的值</li>
+<li>基本类型的赋值都是直接的，而不像对象，赋予的只是其内存的引用，因此传引用后改变所指向的同一个对象的值。</li>
+<li><code>equals()</code>的默认行为是比较对象的引用而非具体内容。除非你在新类中覆写 equals() 方法，否则我们将获取不到想要的结果</li>
+<li>逻辑运算符支持一种称为<strong>短路</strong>（short-circuiting）的现象。整个表达式会在运算到可以明确结果时就停止并返回结果，这意味着该逻辑表达式的后半部分不会被执行到。</li>
+<li>在java中，不能像C/C++一样对非布尔值使用逻辑运算符。</li>
+<li>Java 也添加了一种“不分正负”的右移位运算符（&raquo;&gt;），它使用了“零扩展”（zero extension）：无论正负，都在高位插入 0。这一运算符是 C/C++ 没有的。</li>
+<li>如果移动 char、byte 或 short，则会在移动发生之前将其提升为 int，结果为 int。仅使用右值（rvalue）的 5 个低阶位，即其能表示的int的最大位数。这可以防止我们移动超过 int 范围的位数。若对一个 long 值进行处理，最后得到的结果也是 long。</li>
+<li>三元运算符：布尔表达式 ? 值 1 : 值 2
+若表达式计算为 true，则返回结果 值 1 ；如果表达式的计算为 false，则返回结果 值 2。</li>
+</ul>
+<h3 id="转换相关">转换相关</h3>
+<ul>
+<li>类似移位，char、byte 或 short，会在计算发生之前将其提升为 int。</li>
+<li>java中，narrowing conversion时编译器强制显式转换。</li>
+<li>使用整型数值类型时，显示其二进制形式会很有用。在 Long 型和 Integer 型中这很容易实现，调用其静态的<code>toBinaryString()</code>方法即可。 但是请注意，若将较小的类型传递给 Integer.toBinaryString() 时，类型将自动转换为 int。</li>
+<li>如果在预期为 String 类型的位置使用 boolean 类型的值，则结果会自动转为适当的文本格式（即 &ldquo;true&rdquo; 或 &ldquo;false&rdquo; 字符串）。同时，当表达式不为布尔值时，java不会强制转换其为布尔值。</li>
+</ul>
+<h3 id="基本类型相关">基本类型相关</h3>
+<ul>
+<li>Java 7 引入了二进制的字面值常量，由前导 0b 或 0B 表示，它可以初始化所有的整数类型。</li>
+<li>整数除法会直接砍掉小数，而不是进位。</li>
+<li>从 float 和 double 转换为整数值时，小数位将被截断。若你想对结果进行四舍五入，可以使用 java.lang.Math 的<code>round()</code>方法。</li>
+<li>对于下述语句，编译器通常会将指数作为 double 类型来处理，所以假若没有这个后缀字符 f，编译器就会报错，提示我们应该将 double 型转换成 float 型。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">float</span> <span class="n">f4</span> <span class="o">=</span> <span class="n">1e</span><span class="o">-</span><span class="n">43f</span><span class="o">;</span> 
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>String类支持<code>+</code>和<code>+=</code></li>
+<li>若表达式以一个 String 类型开头（编译器会自动将双引号 &quot;&quot; 标注的的字符序列转换为字符串），那么后续所有运算对象都必须是字符串。</li>
+<li></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Integer.toString()方法的简写:
+</span><span class="c1"></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&#34;</span> <span class="o">+</span> <span class="n">x</span><span class="o">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="其他">其他</h3>
+<ul>
+<li>Random 对象时提供种子（随机数生成器的初始化值，其始终为特定种子值产生相同的序列），让程序每次执行都生成相同的随机数，如此以来输出结果就是可验证的。 若需要生成随机值，可删除代码示例中的种子参数。该对象通过调用方法<code>nextInt()</code>等生成不同类型的随机值。</li>
+<li>下划线
+<img src="/img/onjava8chap4_1.png" alt=""></li>
+<li>Java 不需要<code>sizeof()</code>方法来满足这种需求，因为所有类型的大小在不同平台上是相同的。我们不必考虑这个层次的移植问题 —— Java 本身就是一种“与平台无关”的语言。</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-01-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/ostepchap4/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">《ostep》第四章</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/cpp2chap/">
+            <span class="next-text nav-default">《C&#43;&#43; Primer》 第一二章 变量和基本类型</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

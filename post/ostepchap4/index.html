@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>《ostep》第四章 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/ostepchap4/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="《ostep》第四章" />
+<meta property="og:description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/ostepchap4/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-01-03T19:56:01&#43;08:00" />
+<meta property="article:modified_time" content="2021-01-03T19:56:01&#43;08:00" />
+
+<meta itemprop="name" content="《ostep》第四章">
+<meta itemprop="description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar"><meta itemprop="datePublished" content="2021-01-03T19:56:01&#43;08:00" />
+<meta itemprop="dateModified" content="2021-01-03T19:56:01&#43;08:00" />
+<meta itemprop="wordCount" content="1954">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="《ostep》第四章"/>
+<meta name="twitter:description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">《ostep》第四章</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-01-03 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#第四章-抽象进程">第四章 抽象：进程</a>
+          <ul>
+            <li><a href="#进程api">进程API</a></li>
+            <li><a href="#进程创建的细节">进程创建的细节</a></li>
+            <li><a href="#进程状态">进程状态</a></li>
+            <li><a href="#作业">作业</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="第四章-抽象进程">第四章 抽象：进程</h2>
+<ul>
+<li>操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time sharing技术，允许用户运行多个并发进程，但会带来一些性能损失。</li>
+<li>mechanism是一些低级方法或协议，去实现一些特定的功能。</li>
+<li>在mechanism之上，有一些智能以policy的形式存在。policy是在操作系统内做出某种决定的算法。例如，schedule policy决定运行某组程序中的哪一个。</li>
+<li>操作系统为正在运行的程序提供的抽象即为process。</li>
+<li>process的mechanism state包含了内存，寄存器等。机器状态的内存指的是进程可以访问的地址空间，比如指令的地址，写入读取数据的地址。而许多指令明确更新与读取寄存器，Program Counter告诉程序执行哪个指令，stack pointer和frame pointer用于管理函数参数栈、局部变量和返回地址。</li>
+</ul>
+<h3 id="进程api">进程API</h3>
+<ul>
+<li>进程API包括create、destroy、wait、miscellaneous control、status。destroy接口可停止失控的进程，wait接口适应于等待进程停止运行的状况，miscellaneous control接口顾名思义，status接口可以获得进程的状态信息。</li>
+</ul>
+<h3 id="进程创建的细节">进程创建的细节</h3>
+<ul>
+<li>操作系统运行程序的第一件事是将代码和所有<strong>静态数据</strong>加载到进程的地址空间中。一般仅加载程序执行期间所需要的代码和数据片段。</li>
+<li>加载完成后，操作系统必须为程序的run-time stack分配一些内存。C程序使用栈存放局部变量、函数参数和返回地址，操作系统分配这些内存，并提供给进程。操作系统也可能会用参数初始化栈，具体地，他会将参数argc和argv填入main函数。</li>
+<li>操作系统也可能为程序的堆分配一些内存。c程序的堆用于显式请求的<strong>动态分配数据</strong>，通过<code>malloc</code>和<code>free</code>方法。数据结构也需要堆。</li>
+<li>操作系统还将执行一些其他初始化任务，特别是I/O相关。比如，在UNIX中，默认每个进程都有3个打开的file descriptor，用于标准输入、输出和错误。</li>
+<li>最后，通过跳转到main例程，OS将CPU的控制权转移到新创建的进程中，开始执行程序。</li>
+</ul>
+<h3 id="进程状态">进程状态</h3>
+<ul>
+<li>进程可以处于以下三种状态：running、ready、blocked。在阻塞状态下，一个进程执行了某种操作，直到发生其他事件时才会准备运行。比如，当进程向磁盘发起I/O请求时，它会被阻塞，因此其他进程可以使用处理器,I/O完成后，进程再变为ready或running。从ready到running意味着进程被schedule，反过来则为deschedule。</li>
+<li>操作系统是一个程序，它有一些关键的数据结构来追踪各种信息。比如，为了跟踪每个进程的状态，可能会为所有就绪的进程保留process list，以及跟踪当前正在运行的进程的一些附加信息。操作系统还必须跟踪被阻塞的进程，当I/O事件完成时，操作系统应确保唤醒正确的进程，让它准备好再次运行。
+<img src="/img/ostepchap4_1.png" alt=""></li>
+<li>context switch技术：当进程停止时，在图中的context结构体中保存寄存器的内容，重启进程后再通过将值放回实际存储的物理寄存器中恢复。</li>
+<li>由图可知，还有一些进程状态，如initial表示进程在创建时处于的状态。zoobie(final)表示进程已退出但尚未清理，这样可以允许其他进程(通常是创建进程的父进程)检查进程的返回代码，并查看刚刚完成的进程是否成功执行(通常，在基于UNIX的系统中，程序成功完成任务时返回0)。完成后，父进程将会进行最后一次调用(例如wiat方法)以等待子进程的完成，并告诉操作系统它可以清理这个进程的所有数据结构。</li>
+</ul>
+<h3 id="作业">作业</h3>
+<p>ReadMe
+<img src="ostepchap4_3.png" alt="">
+1.
+<img src="ostepchap4_2.png" alt="">
+由ReadMe中的参数可知，逗号分隔了的需要运行的进程，每个进程分别执行5条指令，全程使用CPU，因此利用率为100%。
+<img src="ostepchap4_4.png" alt="">
+加上<code>-c</code>参数后，显示运行PID0时PID1已就绪，PID0完成后运行PID1。期间一直占用CPU，没有IOs行为。
+2.
+<img src="ostepchap4_5.png" alt="">
+未猜对
+<img src="ostepchap4_6.png" alt="">
+由上图知，完成这两个进程需要10个单位的时间，首先PID0使用CPU4个单位时间，完成后PID1在第5个单位时间上由CPU发出执行IO的指令，而后PID1被阻塞(或waiting)，并且等待4个单位时间的执行IO行为，此时CPU无事可做。最后IO执行完毕，PID1恢复运行，结束进程。
+3.
+<img src="ostepchap4_7.png" alt="">
+由问题2知，执行IO时进程被阻塞，此时CPU无事可做，其他进程可以使用CPU。因此交换顺序后，PID0被阻塞同时PID1可以脱离就绪调用CPU，最终6个单位时间完成两个进程。
+4.
+<img src="ostepchap4_8.png" alt="">
+5.
+<img src="ostepchap4_9.png" alt="">
+6.
+<img src="ostepchap4_10.png" alt="">
+当PID1结束后，应按就绪时间排序进行进程，因此PID0最后执行，系统资源未被有效利用
+7.
+<img src="ostepchap4_11.png" alt="">
+设置立刻运行发出的IO进程可以使CPU利用率达到100%，节省系统与时间资源。
+8.
+略</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-01-03
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/onjava8chap2/">
+            <span class="next-text nav-default">《On Java 8》第二到第四章</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
