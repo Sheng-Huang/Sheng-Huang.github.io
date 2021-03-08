@@ -6,7 +6,16 @@
     <description>Recent content on Seuan no memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Jan 2021 19:56:01 +0800</lastBuildDate><atom:link href="https://Sheng-Huang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Feb 2021 19:31:33 +0800</lastBuildDate><atom:link href="https://Sheng-Huang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Onjava8chap5</title>
+      <link>https://Sheng-Huang.github.io/post/onjava8chap5/</link>
+      <pubDate>Tue, 23 Feb 2021 19:31:33 +0800</pubDate>
+      
+      <guid>https://Sheng-Huang.github.io/post/onjava8chap5/</guid>
+      <description>第五章 控制流 Java 和 C/C++ 同属“自由格式”的编程语言，不像python有缩进等限制，但通常我们会在 Java 控制流程语句中采用首部缩进的规范，以便代码更具可</description>
+    </item>
+    
     <item>
       <title>《OSTEP》第四章</title>
       <link>https://Sheng-Huang.github.io/post/ostepchap4/</link>
