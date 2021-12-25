@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.81.0 with theme even" />
+<meta name="generator" content="Hugo 0.91.1 with theme even" />
 
 
 <link rel="canonical" href="https://Sheng-Huang.github.io/post/ostepchap4/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -43,13 +43,13 @@
 <meta property="og:description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://Sheng-Huang.github.io/post/ostepchap4/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-01-03T19:56:01&#43;08:00" />
-<meta property="article:modified_time" content="2021-01-03T19:56:01&#43;08:00" />
+<meta property="article:published_time" content="2021-01-03T19:56:01+08:00" />
+<meta property="article:modified_time" content="2021-01-03T19:56:01+08:00" />
 
 <meta itemprop="name" content="《OSTEP》第四章">
-<meta itemprop="description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar"><meta itemprop="datePublished" content="2021-01-03T19:56:01&#43;08:00" />
-<meta itemprop="dateModified" content="2021-01-03T19:56:01&#43;08:00" />
-<meta itemprop="wordCount" content="1953">
+<meta itemprop="description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar"><meta itemprop="datePublished" content="2021-01-03T19:56:01+08:00" />
+<meta itemprop="dateModified" content="2021-01-03T19:56:01+08:00" />
+<meta itemprop="wordCount" content="1954">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="《OSTEP》第四章"/>
 <meta name="twitter:description" content="第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar"/>
@@ -186,11 +186,9 @@
 </ul>
 <h3 id="作业">作业</h3>
 <p>ReadMe
-<img src="/images/ostepchap4_3.PNG" alt=""></p>
-<ol>
-<li></li>
-</ol>
-<p><img src="/images/ostepchap4_2.PNG" alt=""><br>
+<img src="/images/ostepchap4_3.PNG" alt="">
+1.<br>
+<img src="/images/ostepchap4_2.PNG" alt=""><br>
 由ReadMe中的参数可知，逗号分隔了的需要运行的进程，每个进程分别执行5条指令，全程使用CPU，因此利用率为100%。<br>
 <img src="/images/ostepchap4_4.PNG" alt=""><br>
 加上<code>-c</code>参数后，显示运行PID0时PID1已就绪，PID0完成后运行PID1。期间一直占用CPU，没有IOs行为。<br>

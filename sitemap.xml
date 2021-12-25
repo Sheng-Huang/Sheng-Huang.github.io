@@ -2,21 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://Sheng-Huang.github.io/post/onjava8chap5/</loc>
-    <lastmod>2021-02-23T19:31:33+08:00</lastmod>
+    <loc>https://Sheng-Huang.github.io/post/geodesy_chap_2/</loc>
+    <lastmod>2021-04-12T12:06:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://Sheng-Huang.github.io/post/</loc>
-    <lastmod>2021-02-23T19:31:33+08:00</lastmod>
+    <lastmod>2021-04-12T12:06:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://Sheng-Huang.github.io/</loc>
+    <lastmod>2021-04-12T12:06:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://Sheng-Huang.github.io/post/onjava8chap5/</loc>
     <lastmod>2021-02-23T19:31:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

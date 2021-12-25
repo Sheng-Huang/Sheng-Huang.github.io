@@ -6,7 +6,16 @@
     <description>Recent content on Seuan no memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Feb 2021 19:31:33 +0800</lastBuildDate><atom:link href="https://Sheng-Huang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Apr 2021 12:06:17 +0800</lastBuildDate><atom:link href="https://Sheng-Huang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Geodesy_chap_2</title>
+      <link>https://Sheng-Huang.github.io/post/geodesy_chap_2/</link>
+      <pubDate>Mon, 12 Apr 2021 12:06:17 +0800</pubDate>
+      
+      <guid>https://Sheng-Huang.github.io/post/geodesy_chap_2/</guid>
+      <description>坐标系统与时间系统 地球的运转 Kepler行星运动定律与证明 太阳处于椭圆行星轨道的焦点上 相等间隔时间内行星与太阳的连线扫过的面积相等 行星轨道周</description>
+    </item>
+    
     <item>
       <title>Onjava8chap5</title>
       <link>https://Sheng-Huang.github.io/post/onjava8chap5/</link>

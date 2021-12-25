@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.81.0 with theme even" />
+<meta name="generator" content="Hugo 0.91.1 with theme even" />
 
 
 <link rel="canonical" href="https://Sheng-Huang.github.io/post/cpp2chap/" />
@@ -35,7 +35,7 @@
 
 
 
-<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -43,12 +43,12 @@
 <meta property="og:description" content="第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://Sheng-Huang.github.io/post/cpp2chap/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-07-01T09:07:14&#43;08:00" />
-<meta property="article:modified_time" content="2020-07-01T09:07:14&#43;08:00" />
+<meta property="article:published_time" content="2020-07-01T09:07:14+08:00" />
+<meta property="article:modified_time" content="2020-07-01T09:07:14+08:00" />
 
 <meta itemprop="name" content="《C&#43;&#43; Primer》 第一二章 变量和基本类型">
-<meta itemprop="description" content="第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main"><meta itemprop="datePublished" content="2020-07-01T09:07:14&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-01T09:07:14&#43;08:00" />
+<meta itemprop="description" content="第一章 部分命令行常识 .\表示文件在当前目录 在UNIX中，运行一个可执行文件需要使用全文件名(Windows中则可以省略扩展名)。 访问main"><meta itemprop="datePublished" content="2020-07-01T09:07:14+08:00" />
+<meta itemprop="dateModified" content="2020-07-01T09:07:14+08:00" />
 <meta itemprop="wordCount" content="4983">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="《C&#43;&#43; Primer》 第一二章 变量和基本类型"/>
@@ -195,12 +195,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cm">/*
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cm">/*
 </span><span class="cm"> *
 </span><span class="cm"> */</span>
 </code></pre></td></tr></table>
@@ -229,10 +229,10 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">signed</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">256</span><span class="c1">//假设char占8bits，c的值为未定义。
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">signed</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">256</span><span class="c1">//假设char占8bits，c的值为未定义。
 </span></code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -290,11 +290,11 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">long</span> <span class="kt">double</span> <span class="n">ld</span> <span class="o">=</span> <span class="err">π</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">long</span> <span class="kt">double</span> <span class="n">ld</span> <span class="o">=</span> <span class="err">π</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">a</span><span class="p">{</span><span class="n">ld</span><span class="p">};</span><span class="c1">//使用赋值符则可以强制转换，不会报错
 </span></code></pre></td></tr></table>
 </div>
@@ -323,12 +323,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="err">；</span>
 <span class="kt">int</span> <span class="o">*&amp;</span><span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
 </code></pre></td></tr></table>
@@ -355,12 +355,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pstring</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">typedef</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pstring</span><span class="p">;</span>
 <span class="k">const</span> <span class="n">pstring</span> <span class="n">cstr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//与下行不同，pstring是变量的由指针所确定的数据类型，cstr不含指针声明符，即a constant pointer to char；
 </span><span class="c1"></span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">cstr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//a pointer to const char；
 </span></code></pre></td></tr></table>
@@ -372,10 +372,10 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">auto</span> <span class="o">&amp;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//应为const auto &amp;a = 1;
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">auto</span> <span class="o">&amp;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//应为const auto &amp;a = 1;
 </span></code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -383,11 +383,11 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">ci</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="kt">int</span> <span class="n">ci</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="k">auto</span> <span class="o">&amp;</span><span class="n">m</span> <span class="o">=</span> <span class="n">ci</span> <span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ci</span><span class="p">;</span> <span class="c1">//这里都是ci，类型相同,在这里auto推演的是变量p而非包含声明符的*p的类型，这里定义了p为指针类型，推断出p为const int*。
 </span></code></pre></td></tr></table>
 </div>
@@ -398,12 +398,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 <span class="k">decltype</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="n">r1</span><span class="p">;</span> <span class="c1">//类型为绑定int的引用
 </span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">0</span><span class="p">)</span> <span class="n">r2</span><span class="p">;</span> <span class="c1">//类型为int
 </span></code></pre></td></tr></table>
