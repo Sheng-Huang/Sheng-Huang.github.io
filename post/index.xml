@@ -6,25 +6,7 @@
     <description>Recent content in Posts on Seuan no memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Apr 2021 12:06:17 +0800</lastBuildDate><atom:link href="https://Sheng-Huang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Geodesy_chap_2</title>
-      <link>https://Sheng-Huang.github.io/post/geodesy_chap_2/</link>
-      <pubDate>Mon, 12 Apr 2021 12:06:17 +0800</pubDate>
-      
-      <guid>https://Sheng-Huang.github.io/post/geodesy_chap_2/</guid>
-      <description>坐标系统与时间系统 地球的运转 Kepler行星运动定律与证明 太阳处于椭圆行星轨道的焦点上 相等间隔时间内行星与太阳的连线扫过的面积相等 行星轨道周</description>
-    </item>
-    
-    <item>
-      <title>Onjava8chap5</title>
-      <link>https://Sheng-Huang.github.io/post/onjava8chap5/</link>
-      <pubDate>Tue, 23 Feb 2021 19:31:33 +0800</pubDate>
-      
-      <guid>https://Sheng-Huang.github.io/post/onjava8chap5/</guid>
-      <description>第五章 控制流 Java 和 C/C++ 同属“自由格式”的编程语言，不像python有缩进等限制，但通常我们会在 Java 控制流程语句中采用首部缩进的规范，以便代码更具可</description>
-    </item>
-    
+    <lastBuildDate>Sun, 03 Jan 2021 19:56:01 +0800</lastBuildDate><atom:link href="https://Sheng-Huang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《OSTEP》第四章</title>
       <link>https://Sheng-Huang.github.io/post/ostepchap4/</link>
@@ -32,15 +14,6 @@
       
       <guid>https://Sheng-Huang.github.io/post/ostepchap4/</guid>
       <description>第四章 抽象：进程 操作系统通过virtualize CPU让一个进程只运行一个时间片，在进程之间切换提供多个虚拟CPU的假象，即time shar</description>
-    </item>
-    
-    <item>
-      <title>《On Java 8》第二到第四章</title>
-      <link>https://Sheng-Huang.github.io/post/onjava8chap2/</link>
-      <pubDate>Sat, 02 Jan 2021 20:51:58 +0800</pubDate>
-      
-      <guid>https://Sheng-Huang.github.io/post/onjava8chap2/</guid>
-      <description>第二章 配置 Shell基本操作 以下为linux系统的操作: Change directory： cd path（路径..为上一级目录） 目录名中含有空格时需要再路径</description>
     </item>
     
     <item>
